@@ -1,0 +1,242 @@
+/* ----- FONT & BASE ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  --primary: #6f4e37;
+  --secondary: #d9a066;
+  --bg: #fffaf0;
+  --text: #333;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ----- NAVBAR ----- */
+.navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: var(--bg);
+  padding: 15px 10vw;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.navbar nav a{
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover{
+  color: var(--primary);
+}
+
+#navToggle{
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+}
+
+/* ----- HERO ----- */
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150px 10vw 100px 10vw;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-text h1{
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.hero-text p{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn{
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-text .btn:hover{
+  background: var(--secondary);
+}
+
+.hero-image img{
+  width: 400px;
+  border-radius: 20px;
+}
+
+/* ----- SECTION ----- */
+.section{
+  padding: 100px 10vw;
+  text-align: center;
+}
+
+.section h2{
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.section p{
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  color: #555;
+}
+
+/* ----- MENU ----- */
+.menu-container{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.menu-item{
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.menu-item img{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ----- GALLERY ----- */
+.gallery-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+}
+
+.gallery-container img{
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* ----- CONTACT ----- */
+.contact-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.contact-info{
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.contact-info p{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-form{
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea{
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form button{
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-form button:hover{
+  background: var(--secondary);
+}
+
+/* ----- FOOTER ----- */
+footer{
+  padding: 40px 10vw;
+  background: #fff;
+  text-align: center;
+  color: #777;
+}
+
+/* ----- RESPONSIVE ----- */
+@media screen and (max-width: 900px){
+  .hero{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image img{
+    width: 300px;
+  }
+
+  .contact-container{
+    flex-direction: column;
+  }
+
+  .navbar nav{
+    display: none;
+  }
+
+  #navToggle{
+    display: block;
+  }
+}
